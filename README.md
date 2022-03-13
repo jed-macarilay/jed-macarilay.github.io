@@ -1,1 +1,0 @@
-# jed-macarilay.github.io
