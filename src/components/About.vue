@@ -7,7 +7,7 @@
           md="6"
         >
           <v-img
-            src="../assets/Website Creator-bro.png"
+            :src="webCreatorImage"
             max-height="45vh"
           ></v-img>
         </v-col>
@@ -33,6 +33,10 @@
     </div>
   </v-container>
 </template>
+
+<script setup>
+  import webCreatorImage from '../assets/Website Creator-bro.png'
+</script>
 
 <style scoped>
   @media (min-width: 1920px) {

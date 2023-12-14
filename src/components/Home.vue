@@ -6,7 +6,7 @@
         md="6"
       >
         <v-img
-          src="../assets/Developer activity-bro.png"
+          :src="developerImage"
           max-height="45vh"
         ></v-img>
       </v-col>
@@ -61,6 +61,11 @@
     </v-row>
   </v-container>
 </template>
+
+<script setup>
+  import developerImage from '../assets/Developer activity-bro.png'
+
+</script>
 
 <style scoped>
   @media (min-width: 1920px) {
