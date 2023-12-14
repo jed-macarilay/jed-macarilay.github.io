@@ -1,7 +1,9 @@
 <template>
   <v-container class="fill-height">
     <Home />
+
     <About />
+
     <Experience />
   </v-container>
 </template>

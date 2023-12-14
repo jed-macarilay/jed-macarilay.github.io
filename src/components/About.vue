@@ -1,20 +1,23 @@
 <template>
-  <v-container
-    id="about"
-    style="padding: 20vh;"
-  >
-    <div class="px-16">
-      <v-row class="d-flex align-center justify-center">
-        <v-col cols="5">
+  <v-container id="about">
+    <div>
+      <v-row class="d-flex flex-column flex-md-row align-center justify-center">
+        <v-col
+          sm="12"
+          md="6"
+        >
           <v-img
             src="../assets/Website Creator-bro.png"
+            max-height="45vh"
           ></v-img>
         </v-col>
 
-        <v-col cols="6">
+        <v-col
+          sm="12"
+          md="6"
+        >
           <v-card
-            class="mx-auto pa-5 mb-5"
-            width="25vw"
+            class="px-md-5"
             elevation="0"
           >
             <v-card-title class="font-weight-bold text-h5">About me</v-card-title>
@@ -29,8 +32,12 @@
       </v-row>
     </div>
   </v-container>
-  </template>
-  
-  <script setup>
-    //
-  </script>
+</template>
+
+<style scoped>
+  @media (min-width: 1920px) {
+    .v-container {
+      max-width: 1250px !important;
+    }
+  }
+</style>

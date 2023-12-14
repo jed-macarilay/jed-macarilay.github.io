@@ -5,13 +5,12 @@
     <v-responsive class="align-center text-center fill-height">
       <div class="text-h3 mb-10">My Experience</div>
       <v-row class="d-flex align-center justify-center">
-        <v-col cols="8">
+        <v-col md="8" sm="10">
           <v-row class="d-flex align-center justify-center">
-            <v-col cols="6">
+            <v-col md="6" sm="12">
               <v-card
                 class="mx-auto text-left"
                 variant="outlined"
-                height="20vh"
               >
                 <v-card-title class="text-h5 font-weight-bold pa-3">Vue JS Developer</v-card-title>
                 <v-card-text>
@@ -24,11 +23,10 @@
               </v-card>
             </v-col>
 
-            <v-col cols="6">
+            <v-col md="6" sm="12">
               <v-card
                 class="mx-auto text-left"
                 variant="outlined"
-                height="20vh"
               >
                 <v-card-title class="text-h5 font-weight-bold pa-3">Full Stack Web Developer</v-card-title>
                 <v-card-text>
@@ -43,11 +41,10 @@
           </v-row>
 
           <v-row class="d-flex align-center justify-center">
-            <v-col cols="6">
+            <v-col md="6" sm="12">
               <v-card
                 class="mx-auto text-left"
                 variant="outlined"
-                height="20vh"
               >
                 <v-card-title class="text-h5 font-weight-bold pa-3">Software Developer</v-card-title>
                 <v-card-text>
@@ -60,11 +57,10 @@
               </v-card>
             </v-col>
 
-            <v-col cols="6">
+            <v-col md="6" sm="12">
               <v-card
                 class="mx-auto text-left"
                 variant="outlined"
-                height="20vh"
               >
                 <v-card-title class="text-h5 font-weight-bold pa-3">Jarvis Butler Property Management Corporation</v-card-title>
                 <v-card-text>
