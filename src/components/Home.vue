@@ -11,7 +11,7 @@
         ></v-img>
       </v-col>
       <v-col
-        class="text-center text-md-left"
+        class="text-center"
         sm="12"
         md="6"
       >
