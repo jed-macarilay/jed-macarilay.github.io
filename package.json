@@ -2,7 +2,7 @@
   "name": "jed-macarilay.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/jed-macarilay/jed-macarilay.github.io",
+  "homepage": "https://github.com/jed-macarilay/jed-macarilay.github.io/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
