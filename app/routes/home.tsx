@@ -74,7 +74,7 @@ export default function Home() {
               <Badges techs={[
                 'Vue.js',
                 'Laravel',
-                'VuetifyDeveloped a rental management system with payment processing, lease tracking, and role-based access.',
+                'Vuetify',
                 'CodeIgniter',
                 'October CMS',
                 'Docker',
