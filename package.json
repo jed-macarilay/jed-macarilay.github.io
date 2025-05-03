@@ -1,14 +1,15 @@
 {
   "name": "my-portoflio",
   "private": true,
-  "homepage": "https://github.com/jed-macarilay/jed-macarilay.github.io/",
+  "homepage": "https://github.com/jed-macarilay/jed-macarilay.github.io",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "predeploy": "next build",
-    "deploy": "gh-pages -d .next"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@react-router/node": "^7.5.1",
