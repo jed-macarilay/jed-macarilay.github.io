@@ -5,11 +5,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "react-router";
+} from "react-router"
 
-import type { Route } from "./+types/root";
-import "./app.css";
-import Header from "../app/components/Header"
+import type { Route } from "./+types/root"
+import "./app.css"
+import Header from "./components/Header"
+import Sidebar from "./components/Sidebar"
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,6 +25,13 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Jedmark Macarilay" },
+    { name: "description", content: "Welcome to my Portfolio" },
+  ];
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -33,10 +41,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-zinc-900">        
-        <Header />
-        <div className="w-full flex items-center justify-center mb-10">
-          {children}
+      <body>
+        <div className="w-full min-h-screen bg-zinc-900 text-white p-4 justify-center items-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:py-16 gap-6">
+            <Sidebar />
+            <main className="col-span-1 md:col-span-3 space-y-6">
+              <Header />
+              {children}
+            </main>
+          </div>
         </div>
         <ScrollRestoration />
         <Scripts />
