@@ -18,8 +18,6 @@ export default function Sidebar() {
       <div className="mt-6 space-y-2 text-sm">
         <p className="flex items-center gap-2"><Mail size={16} /> jed.macarilay@gmail.com</p>
         <p className="flex items-center gap-2"><Phone size={16} /> 09507475414</p>
-        <a href="https://github.com/jed-macarilay" className="flex items-center gap-2"><Github size={16} target="_blank" /> https://github.com/jed-macarilay</a>
-        <a href="https://gitlab.com/jed.macarilay" className="flex items-center gap-2"><Gitlab size={16} target="_blank" /> https://gitlab.com/jed.macarilay</a>
         <a href="https://www.linkedin.com/in/jedmark-macarilay-b75632236/" className="flex items-start gap-2"><Linkedin size={16} target="_blank" /> https://www.linkedin.com/in/jedmark-macarilay-b75632236/</a>
       </div>
     </aside>
