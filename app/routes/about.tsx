@@ -11,13 +11,7 @@ export default function About() {
       <div className="w-full md:w-1/2">
         <h2 className="text-xl font-bold mb-4">Senior Developer | Full Stack Web Developer</h2>
         <p className="text-sm text-zinc-300 mb-4">
-          Hi, I'm a passionate Full Stack Web Developer with over 5 years of experience developing web applications
-          using Vue.js, React, TypeScript, Node.js, Laravel, and other modern web technologies. I specialize in building
-          clean, efficient, and scalable solutions that solve real-world problems through intuitive design and thoughtful code.
-        </p>
-        <p className="text-sm text-zinc-300">
-          I'm currently seeking opportunities to grow as a developer, contribute to meaningful projects, and collaborate with
-          forward-thinking teams that value innovation, creativity, and continuous learning.
+          Full-Stack Developer with 6 years of experience building scalable web applications across frontend and backend. Expert in Vue.js and Laravel, with production experience in React, Node.js, and TypeScript over the past year. Adept at delivering clean, maintainable code, integrating REST APIs, and deploying via cloud platforms like Azure and AWS. I’m passionate about learning new stacks and adapting quickly to evolving tech environments.
         </p>
       </div>
     </section>
