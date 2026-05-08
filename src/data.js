@@ -5,15 +5,15 @@ export const personal = {
   email: 'jed.macarilay@gmail.com',
   phone: '09507475414',
   location: 'Philippines',
-  linkedin: 'https://www.linkedin.com/in/jedmark-macarilay-b75632236/',
-  github: 'https://github.com/jedmark', // update with your real username
+  linkedin: 'https://www.linkedin.com/in/jedmark-macarilay/',
+  github: 'https://github.com/', // TODO: update with your real GitHub username
   yearsExp: 8,
 }
 
 export const skills = [
   {
     category: 'Frontend',
-    items: ['Vue.js', 'React', 'Next.js', 'TypeScript', 'Vuetify', 'Tailwind CSS', 'Bootstrap'],
+    items: ['Vue.js', 'React', 'Next.js', 'TypeScript', 'Vuetify', 'Tailwind CSS', 'Bootstrap', 'Miniprogram'],
   },
   {
     category: 'Backend',
@@ -25,7 +25,7 @@ export const skills = [
   },
   {
     category: 'Tools & Other',
-    items: ['Git', 'GitHub', 'GitLab', 'JWT', 'OAuth2', 'MongoDB', 'MySQL', 'PostgreSQL', 'Drupal', 'OctoberCMS'],
+    items: ['Git', 'GitHub', 'GitLab', 'JWT', 'OAuth2', 'MongoDB', 'MySQL', 'PostgreSQL', 'OctoberCMS', 'Drupal'],
   },
 ]
 
@@ -36,12 +36,13 @@ export const experience = [
     period: 'Jun 2025 – Present',
     current: true,
     bullets: [
-      'Developing responsive web applications using React and TypeScript in a production fintech environment.',
-      'Building and deploying frontend assets via AWS S3 and CloudFront for fast, globally distributed delivery.',
-      'Implementing automated deployment workflows using GitHub Actions CI/CD pipelines.',
-      'Building Web Application features that run on the GCash platform, integrating with one of the Philippines\' largest fintech ecosystems as a third-party partner.',
+      'Served as main developer and single-handedly built the MVP of Scan2Win — a GCash Miniprogram app — independently architecting, developing, and delivering the full initial release as a third-party partner on one of the Philippines\' largest fintech platforms.',
+      'Developing responsive web dashboards and applications using React and TypeScript, serving both internal and client-facing use cases.',
+      'Managing and maintaining CMS platforms for branding clients, handling content structure, customizations, and ongoing feature updates.',
+      'Building and deploying frontend assets via AWS S3 and CloudFront for fast, globally distributed content delivery.',
+      'Implementing automated deployment workflows using GitHub Actions for reliable and consistent CI/CD pipelines.',
     ],
-    tags: ['React', 'TypeScript', 'AWS S3', 'CloudFront', 'GitHub Actions'],
+    tags: ['React', 'TypeScript', 'AWS S3', 'CloudFront', 'GitHub Actions', 'Miniprogram', 'CMS'],
   },
   {
     title: 'Senior Developer',
@@ -49,12 +50,13 @@ export const experience = [
     period: 'Jan 2024 – Jun 2025',
     current: false,
     bullets: [
-      'Developed reusable Vue.js and React component libraries for dynamic industrial control interfaces.',
-      'Designed and scaled Laravel and Node.js REST APIs with a focus on performance and security.',
-      'Led backend query optimization, resulting in measurable improvements to application load times.',
-      'Collaborated cross-functionally with QA and Product teams to deliver features on schedule.',
+      'Served as main developer (full-stack) of a Maritime Logistics Platform — handling both frontend and backend development end-to-end.',
+      'Worked as one of the main developers on the Real-Time Transit Information System for the Washington Metropolitan Area Transit Authority (WMATA) — contributing across multiple versions — using Next.js, Node.js, and Azure Functions.',
+      'Designed and implemented real-time transit data APIs and dashboard features for commuter information and route tracking, and owned backend services using Azure Functions for scalable, event-driven data processing.',
+      'Built and optimized a responsive Next.js web interface for real-time transit updates and system monitoring, improving data delivery speed through API refactoring and cloud-based architecture enhancements.',
+      'Championed coding standards, participated in code reviews, and collaborated cross-functionally with QA and Product teams to ensure quality and timely delivery.',
     ],
-    tags: ['Vue.js', 'React', 'Laravel', 'Node.js', 'Azure'],
+    tags: ['Vue.js', 'React', 'Next.js', 'Node.js', 'Laravel', 'Azure Functions', 'TypeScript'],
   },
   {
     title: 'Vue.js Developer',
@@ -62,19 +64,19 @@ export const experience = [
     period: 'Jun 2022 – Jul 2023',
     current: false,
     bullets: [
-      'Built and maintained modular Vue 3 component libraries with emphasis on reusability and scalability.',
-      'Integrated automated testing workflows and conducted regular codebase audits.',
-      'Applied security patches proactively, keeping applications aligned with best practices.',
+      'Assigned to a banking client as the sole frontend developer, maintaining multiple loan and insurance web applications used by the client\'s customers and internal teams.',
+      'Solely maintained and updated the bank\'s public-facing website, handling bug fixes, feature updates, and content changes.',
+      'Served as the main point of contact for client concerns, coordinating directly with stakeholders to address issues and deliver updates on time.',
     ],
-    tags: ['Vue 3', 'Unit Testing', 'CI/CD'],
+    tags: ['Vue 3', 'TypeScript', 'Banking', 'Frontend'],
   },
   {
-    title: 'Full-Stack Developer',
+    title: 'Full-Stack Developer (Part-Time)',
     company: 'Redmer Productions, LLC',
     period: 'Jul 2023 – Sep 2023',
     current: false,
     bullets: [
-      'Built clinical training tools, gamified simulations, and virtual clinical environments.',
+      'Built clinical training tools, gamified simulations (\'Gamulations\'), and virtual clinical environments.',
       'Developed assessment and certification platforms using Vue.js, Node.js, and MongoDB.',
     ],
     tags: ['Vue.js', 'Node.js', 'MongoDB'],
@@ -96,10 +98,11 @@ export const experience = [
     period: 'May 2019 – Dec 2021',
     current: false,
     bullets: [
-      'Delivered full-stack solutions across multiple client projects in a digital agency environment.',
-      'Reviewed code submissions and authored documentation for team knowledge sharing.',
+      'Worked as main developer and maintainer across multiple client projects simultaneously, handling both frontend and backend using Laravel and Vue.js.',
+      'Built and maintained a CMS application for managing content across client platforms, supporting non-technical users with a clean interface.',
+      'Reviewed code across projects and kept internal documentation updated to help the team stay aligned.',
     ],
-    tags: ['Laravel', 'Vue.js'],
+    tags: ['Laravel', 'Vue.js', 'CMS', 'PHP', 'MySQL'],
   },
   {
     title: 'Junior Web Developer',
@@ -107,40 +110,68 @@ export const experience = [
     period: 'Sep 2018 – Mar 2019',
     current: false,
     bullets: [
-      'Developed internal tools and backend services using Laravel, PHP, JavaScript, and SQL.',
+      'Built multiple web applications to support the company\'s real estate operations, including a property selling and leasing platform and a tenant management system.',
+      'Handled full-stack development using Laravel, PHP, JavaScript, and SQL, taking ownership of both frontend and backend.',
     ],
-    tags: ['Laravel', 'PHP', 'SQL'],
+    tags: ['Laravel', 'PHP', 'JavaScript', 'SQL', 'Real Estate'],
   },
 ]
 
 export const projects = [
   {
-    title: 'Scan2Win - GCash Platform',
-    description: 'Building product features at CognitiveAI that run on the GCash platform — integrating with one of the Philippines\' largest fintech ecosystems as a third-party partner.',
-    tags: ['React', 'TypeScript'],
+    title: 'Scan2Win — GCash Miniprogram App',
+    company: 'CognitiveAI',
+    description: 'Served as main developer and single-handedly built the full MVP of Scan2Win, a Miniprogram app running on the GCash platform. Independently handled architecture, development, and delivery as a third-party partner.',
+    tags: ['React', 'TypeScript', 'Miniprogram', 'AWS S3', 'CloudFront'],
     status: 'In Production',
-    link: null, // private
+    link: null,
   },
   {
-    title: 'Industrial Control Dashboard',
-    description: 'Built a real-time industrial control UI using Vue.js and React components for Diversified Robotics, enabling operators to monitor and manage machinery interfaces.',
+    title: 'CMS Platforms for Branding Clients',
+    company: 'CognitiveAI',
+    description: 'Managing and maintaining CMS dashboards for branding clients — handling content architecture, custom features, and ongoing updates.',
+    tags: ['CMS', 'React', 'TypeScript'],
+    status: 'In Production',
+    link: null,
+  },
+  {
+    title: 'Maritime Logistics Platform',
+    company: 'Diversified Robotics',
+    description: 'Served as main full-stack developer — independently handling both frontend and backend development end-to-end for a maritime operations management platform.',
     tags: ['Vue.js', 'React', 'Laravel', 'Node.js'],
     status: 'In Production',
     link: null,
   },
   {
-    title: 'Clinical Gamulation Platform',
-    description: 'Gamified clinical training tools and virtual environments for healthcare education, built with Vue.js, Node.js, and MongoDB.',
-    tags: ['Vue.js', 'Node.js', 'MongoDB'],
+    title: 'Real-Time Transit Information System',
+    company: 'Diversified Robotics',
+    description: 'One of the main developers on the Real-Time Transit Information System for the Washington Metropolitan Area Transit Authority (WMATA), contributing across multiple versions. Built real-time APIs, commuter dashboards, and route tracking using Next.js, Node.js, and Azure Functions.',
+    tags: ['Next.js', 'Node.js', 'Azure Functions', 'TypeScript'],
+    status: 'In Production',
+    link: null,
+  },
+  {
+    title: 'Banking Loan & Insurance Apps',
+    company: 'Questronix Corporation',
+    description: 'Sole frontend developer assigned to a banking client, maintaining multiple loan and insurance web applications and the bank\'s public-facing website. Also acted as the main point of contact for client concerns.',
+    tags: ['Vue 3', 'TypeScript', 'Banking'],
     status: 'Delivered',
     link: null,
   },
-  // Add your own open-source or personal projects below:
-  // {
-  //   title: 'My Component Library',
-  //   description: 'A collection of reusable Vue 3 / React components.',
-  //   tags: ['Vue 3', 'React', 'TypeScript'],
-  //   status: 'Open Source',
-  //   link: 'https://github.com/yourhandle/your-repo',
-  // },
+  {
+    title: 'Multi-Client Web Projects + CMS',
+    company: 'Mobext Philippines',
+    description: 'Main developer and maintainer across multiple client projects simultaneously — handling both frontend and backend. Also built a CMS application for managing content across client platforms.',
+    tags: ['Laravel', 'Vue.js', 'CMS', 'PHP'],
+    status: 'Delivered',
+    link: null,
+  },
+  {
+    title: 'Real Estate Web Applications',
+    company: 'Jarvis Butler Property Management',
+    description: 'Built multiple web applications to support real estate operations including a property selling and leasing platform, a tenant management system, and other internal tools.',
+    tags: ['Laravel', 'PHP', 'JavaScript', 'SQL'],
+    status: 'Delivered',
+    link: null,
+  },
 ]
