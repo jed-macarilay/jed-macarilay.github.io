@@ -192,14 +192,6 @@ export const projects = [
     status: 'Delivered',
     link: null,
   },
-  {
-    title: 'Simulation Platform',
-    company: 'QAIROS',
-    description: 'Designed and maintained a modular simulation platform with a flexible backend architecture. Integrated Drupal CMS to enable non-technical teams to manage content independently.',
-    tags: ['Vue.js', 'Node.js', 'Drupal'],
-    status: 'Delivered',
-    link: null,
-  },
   // Uncomment and fill in as you build personal projects:
   // {
   //   title: 'My Component Library',
