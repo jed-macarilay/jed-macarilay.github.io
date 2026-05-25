@@ -17,12 +17,17 @@ export default function Experience() {
         <div className="space-y-3">
           {experience.map((job, i) => (
             <div
-              key={i}
-              className={`border rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer ${expanded === i ? 'border-accent bg-white' : 'border-subtle hover:border-accent/40'}`}
-              onClick={() => setExpanded(expanded === i ? -1 : i)}
+              key={`${job.company}-${job.title}`}
+              className={`border rounded-2xl overflow-hidden transition-all duration-300 ${expanded === i ? 'border-accent bg-white' : 'border-subtle hover:border-accent/40'}`}
             >
               {/* Header row */}
-              <div className="p-5 flex items-start justify-between gap-4">
+              <button
+                type="button"
+                className="w-full p-5 flex items-start justify-between gap-4 text-left cursor-pointer"
+                onClick={() => setExpanded(expanded === i ? -1 : i)}
+                aria-expanded={expanded === i}
+                aria-controls={`experience-panel-${i}`}
+              >
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <h3 className="font-display font-600 text-base text-ink">{job.title}</h3>
@@ -39,11 +44,11 @@ export default function Experience() {
                 <span className={`text-muted mt-0.5 transition-transform duration-300 text-lg ${expanded === i ? 'rotate-45' : ''}`}>
                   +
                 </span>
-              </div>
+              </button>
 
               {/* Expanded content */}
               {expanded === i && (
-                <div className="px-5 pb-5 border-t border-subtle pt-4">
+                <div id={`experience-panel-${i}`} className="px-5 pb-5 border-t border-subtle pt-4">
                   <ul className="space-y-2 mb-4">
                     {job.bullets.map((bullet, j) => (
                       <li key={j} className="font-body text-sm text-ink flex gap-2">

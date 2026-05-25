@@ -6,7 +6,7 @@ export const personal = {
   phone: '09507475414',
   location: 'Philippines',
   linkedin: 'https://www.linkedin.com/in/jedmark-macarilay/',
-  github: 'https://github.com/', // TODO: update with your real GitHub username
+  github: 'https://github.com/jedmark',
   yearsExp: 8,
 }
 
@@ -119,6 +119,7 @@ export const experience = [
 
 export const projects = [
   {
+    id: 'cognitiveai-scan2win',
     title: 'Scan2Win GCash Miniprogram App',
     company: 'CognitiveAI',
     description: 'Served as main developer and single-handedly built the full MVP of Scan2Win, a Miniprogram app running on the GCash platform. Independently handled architecture, development, and delivery as a third-party partner.',
@@ -127,6 +128,7 @@ export const projects = [
     link: "https://gcashapp.page.link/?link=https://gcash.splashscreen/?redirect%3Dgcash%3A%2F%2Fcom.mynt.gcash%2Fapp%2F006300121300%3FappId%3D2170020233750696%2526page%253Dpages%252Finitial%252Finitial&apn=com.globe.gcash.android&isi=520020791&ibi=com.globetel.gcash",
   },
   {
+    id: 'cognitiveai-cms-platforms',
     title: 'CMS Platforms for Branding Clients',
     company: 'CognitiveAI',
     description: 'Managing and maintaining CMS dashboards for branding clients, handling content architecture, custom features, and ongoing updates.',
@@ -135,6 +137,7 @@ export const projects = [
     link: null,
   },
   {
+    id: 'diversified-maritime-logistics',
     title: 'Maritime Logistics Platform',
     company: 'Diversified Robotics',
     description: 'Served as main full-stack developer independently handling both frontend and backend development end-to-end for a maritime operations management platform.',
@@ -148,6 +151,7 @@ export const projects = [
     ],
   },
   {
+    id: 'diversified-wmata-transit',
     title: 'Real-Time Transit Information System',
     company: 'Diversified Robotics',
     description: 'One of the main developers on the Real-Time Transit Information System for the Washington Metropolitan Area Transit Authority (WMATA), contributing across multiple versions. Built real-time APIs, commuter dashboards, and route tracking using Next.js, Node.js, and Azure Functions.',
@@ -161,6 +165,7 @@ export const projects = [
     ],
   },
   {
+    id: 'questronix-banking-apps',
     title: 'Banking Loan & Insurance Apps',
     company: 'Questronix Corporation',
     description: 'Sole frontend developer assigned to a banking client, maintaining multiple loan and insurance web applications and the bank\'s public-facing website. Also acted as the main point of contact for client concerns.',
@@ -169,6 +174,7 @@ export const projects = [
     link: null,
   },
   {
+    id: 'mobext-multi-client-cms',
     title: 'Multi-Client Web Projects + CMS',
     company: 'Mobext Philippines',
     description: 'Main developer and maintainer across multiple client projects simultaneously handling both frontend and backend. Also built a CMS application for managing content across client platforms.',
@@ -177,6 +183,7 @@ export const projects = [
     link: null,
   },
   {
+    id: 'jarvis-real-estate-platforms',
     title: 'Real Estate Web Applications',
     company: 'Jarvis Butler Property Management',
     description: 'Built multiple web applications to support real estate operations including a property selling and leasing platform, a tenant management system, and other internal tools.',
@@ -185,6 +192,7 @@ export const projects = [
     link: null,
   },
   {
+    id: 'redmer-clinical-gamulation',
     title: 'Clinical Training & Gamulation Platform',
     company: 'Redmer Productions',
     description: 'Built web-based clinical training tools, gamified simulations, assessment and certification programs, and virtual clinical environments for healthcare education.',

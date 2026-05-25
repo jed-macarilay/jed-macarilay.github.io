@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { projects } from '../data'
 
 const statusColors = {
@@ -9,20 +9,39 @@ const statusColors = {
 
 function Lightbox({ images, startIndex, onClose }) {
   const [current, setCurrent] = useState(startIndex)
+  const closeButtonRef = useRef(null)
 
   const prev = () => setCurrent(i => (i - 1 + images.length) % images.length)
   const next = () => setCurrent(i => (i + 1) % images.length)
+
+  useEffect(() => {
+    closeButtonRef.current?.focus()
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') onClose()
+      if (event.key === 'ArrowLeft') prev()
+      if (event.key === 'ArrowRight') next()
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [])
 
   return (
     <div
       className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Project image lightbox"
     >
       <div className="relative max-w-6xl w-full" onClick={e => e.stopPropagation()}>
         {/* Close button */}
         <button
+          ref={closeButtonRef}
           onClick={onClose}
           className="absolute -top-10 right-0 text-white/70 hover:text-white text-2xl font-light"
+          aria-label="Close lightbox"
         >
           ✕
         </button>
@@ -40,12 +59,14 @@ function Lightbox({ images, startIndex, onClose }) {
             <button
               onClick={prev}
               className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/25 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg transition-all"
+              aria-label="Previous image"
             >
               ‹
             </button>
             <button
               onClick={next}
               className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/25 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg transition-all"
+              aria-label="Next image"
             >
               ›
             </button>
@@ -59,6 +80,7 @@ function Lightbox({ images, startIndex, onClose }) {
               key={i}
               onClick={() => setCurrent(i)}
               className={`w-2 h-2 rounded-full transition-all ${i === current ? 'bg-white' : 'bg-white/30'}`}
+              aria-label={`Go to image ${i + 1}`}
             />
           ))}
           <span className="text-white/50 text-xs ml-2">{current + 1} / {images.length}</span>
@@ -74,8 +96,12 @@ function ImageGallery({ images }) {
 
   return (
     <>
-      <div className="relative w-full rounded-xl overflow-hidden bg-subtle mb-4 group cursor-zoom-in" style={{ aspectRatio: '16/9' }}
+      <button
+        type="button"
+        className="relative w-full rounded-xl overflow-hidden bg-subtle mb-4 group cursor-zoom-in text-left"
+        style={{ aspectRatio: '16/9' }}
         onClick={() => setLightboxOpen(true)}
+        aria-label="Open project screenshots"
       >
         <img
           src={images[current]}
@@ -95,10 +121,12 @@ function ImageGallery({ images }) {
             <button
               onClick={e => { e.stopPropagation(); setCurrent(i => (i - 1 + images.length) % images.length) }}
               className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-ink w-7 h-7 rounded-full flex items-center justify-center text-xs shadow transition-all opacity-0 group-hover:opacity-100"
+              aria-label="Previous screenshot"
             >‹</button>
             <button
               onClick={e => { e.stopPropagation(); setCurrent(i => (i + 1) % images.length) }}
               className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-ink w-7 h-7 rounded-full flex items-center justify-center text-xs shadow transition-all opacity-0 group-hover:opacity-100"
+              aria-label="Next screenshot"
             >›</button>
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
               {images.map((_, i) => (
@@ -106,12 +134,13 @@ function ImageGallery({ images }) {
                   key={i}
                   onClick={e => { e.stopPropagation(); setCurrent(i) }}
                   className={`w-1.5 h-1.5 rounded-full transition-all ${i === current ? 'bg-white' : 'bg-white/50'}`}
+                  aria-label={`Go to screenshot ${i + 1}`}
                 />
               ))}
             </div>
           </>
         )}
-      </div>
+      </button>
 
       {lightboxOpen && (
         <Lightbox images={images} startIndex={current} onClose={() => setLightboxOpen(false)} />
@@ -131,7 +160,7 @@ export default function Projects() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, i) => (
-            <div key={i} className="border border-subtle rounded-2xl overflow-hidden flex flex-col hover:border-accent/50 transition-colors bg-paper">
+            <div key={project.id || project.title} className="border border-subtle rounded-2xl overflow-hidden flex flex-col hover:border-accent/50 transition-colors bg-paper">
               {project.images && (
                 <div className="px-4 pt-4">
                   <ImageGallery images={project.images} />
@@ -164,7 +193,7 @@ export default function Projects() {
           <div className="border border-dashed border-subtle rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3 bg-paper/50">
             <span className="font-display text-3xl text-subtle">+</span>
             <p className="font-body text-sm text-muted">Personal projects coming soon</p>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-accent hover:underline">Check my GitHub →</a>
+            <a href="https://github.com/jedmark" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-accent hover:underline">Check my GitHub →</a>
           </div>
         </div>
       </div>
