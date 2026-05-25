@@ -11,20 +11,23 @@
 
   html {
     scroll-behavior: smooth;
-    background-color: #F7F5F0;
+    background-color: #F4F1EA;
   }
 
   body {
     font-family: 'DM Sans', sans-serif;
-    color: #0D0D0D;
-    background-color: #F7F5F0;
+    color: #111827;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(15, 118, 110, 0.08), transparent 35%),
+      radial-gradient(circle at 85% 75%, rgba(15, 118, 110, 0.06), transparent 30%),
+      #F4F1EA;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    background: #1A5276;
-    color: #F7F5F0;
+    background: #0F766E;
+    color: #F4F1EA;
   }
 
   ::-webkit-scrollbar {
@@ -32,11 +35,11 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #F7F5F0;
+    background: #F4F1EA;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1A5276;
+    background: #0F766E;
     border-radius: 3px;
   }
 }
@@ -51,5 +54,14 @@
 
   .opacity-0-init {
     opacity: 0;
+  }
+
+  .hero-noise {
+    background-image:
+      linear-gradient(to right, rgba(15, 118, 110, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 118, 110, 0.04) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle at 50% 45%, black 35%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at 50% 45%, black 35%, transparent 80%);
   }
 }

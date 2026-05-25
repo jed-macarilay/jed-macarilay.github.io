@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Highlights from './components/Highlights'
 import About from './components/About'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
@@ -13,6 +14,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Highlights />
         <About />
         <Skills />
         <Experience />

@@ -150,17 +150,26 @@ function ImageGallery({ images }) {
 }
 
 export default function Projects() {
+  const sortedProjects = [...projects].sort((a, b) => {
+    const aPersonal = a.company === 'Personal Project' ? 1 : 0
+    const bPersonal = b.company === 'Personal Project' ? 1 : 0
+    return bPersonal - aPersonal
+  })
+
   return (
     <section id="projects" className="py-24 px-6 border-t border-subtle bg-white">
       <div className="max-w-5xl mx-auto">
         <span className="font-mono text-xs text-accent tracking-widest uppercase mb-4 block">04 / Projects</span>
         <div className="flex flex-wrap items-end justify-between gap-4 mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-ink leading-tight">Selected work</h2>
-          <p className="font-body text-sm text-muted max-w-sm">Professional projects from 8 years of industry work. Code is proprietary — descriptions reflect my role and contributions.</p>
+          <p className="font-body text-sm text-muted max-w-sm">Selected work from 8 years in industry. Some entries are anonymized due to client confidentiality and NDA constraints.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((project, i) => (
-            <div key={project.id || project.title} className="border border-subtle rounded-2xl overflow-hidden flex flex-col hover:border-accent/50 transition-colors bg-paper">
+          {sortedProjects.map((project, i) => {
+            const isPersonal = project.company === 'Personal Project'
+
+            return (
+            <div key={project.id || project.title} className={`border rounded-2xl overflow-hidden flex flex-col hover:-translate-y-0.5 transition-all shadow-[0_10px_24px_rgba(13,13,13,0.04)] ${isPersonal ? 'border-accent bg-card ring-1 ring-accent/30 hover:border-accent' : 'border-subtle hover:border-accent/50 bg-paper'}`}>
               {project.images && (
                 <div className="px-4 pt-4">
                   <ImageGallery images={project.images} />
@@ -169,7 +178,14 @@ export default function Projects() {
               <div className="p-5 flex flex-col gap-4 flex-1">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs text-muted">0{i + 1}</span>
-                  <span className={`font-body text-xs border px-2.5 py-0.5 rounded-full ${statusColors[project.status] || 'bg-gray-50 text-gray-600 border-gray-200'}`}>{project.status}</span>
+                  <div className="flex items-center gap-2">
+                    {isPersonal && (
+                      <span className="font-body text-xs border px-2.5 py-0.5 rounded-full bg-accent text-paper border-accent">
+                        Featured Personal Project
+                      </span>
+                    )}
+                    <span className={`font-body text-xs border px-2.5 py-0.5 rounded-full ${statusColors[project.status] || 'bg-gray-50 text-gray-600 border-gray-200'}`}>{project.status}</span>
+                  </div>
                 </div>
                 <div className="flex-1">
                   <h3 className="font-display font-semibold text-base text-ink mb-1">{project.title}</h3>
@@ -189,7 +205,8 @@ export default function Projects() {
                 }
               </div>
             </div>
-          ))}
+            )
+          })}
           <div className="border border-dashed border-subtle rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3 bg-paper/50">
             <span className="font-display text-3xl text-subtle">+</span>
             <p className="font-body text-sm text-muted">Personal projects coming soon</p>

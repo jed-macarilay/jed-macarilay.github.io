@@ -9,11 +9,13 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
-        ink: '#0D0D0D',
-        paper: '#F7F5F0',
-        accent: '#1A5276',
+        ink: '#111827',
+        paper: '#F4F1EA',
+        accent: '#0F766E',
+        accentDark: '#115E59',
+        card: '#FFFCF7',
         muted: '#6B7280',
-        subtle: '#E8E5DF',
+        subtle: '#D6D3CD',
       },
       animation: {
         'fade-up': 'fadeUp 0.6s ease forwards',
