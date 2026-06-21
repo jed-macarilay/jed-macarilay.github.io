@@ -18,9 +18,8 @@ export default function Experience() {
           {experience.map((job, i) => (
             <div
               key={`${job.company}-${job.title}`}
-              className={`border rounded-2xl overflow-hidden transition-all duration-300 ${expanded === i ? 'border-accent bg-white' : 'border-subtle hover:border-accent/40'}`}
+              className={`border rounded-lg overflow-hidden transition-all duration-300 ${expanded === i ? 'border-accent bg-white' : 'border-subtle hover:border-accent/40 bg-white'}`}
             >
-              {/* Header row */}
               <button
                 type="button"
                 className="w-full p-5 flex items-start justify-between gap-4 text-left cursor-pointer"
@@ -32,13 +31,13 @@ export default function Experience() {
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <h3 className="font-display font-600 text-base text-ink">{job.title}</h3>
                     {job.current && (
-                      <span className="font-body text-xs bg-accent text-paper px-2.5 py-0.5 rounded-full">
+                      <span className="font-body text-xs bg-accent text-paper px-2.5 py-0.5 rounded-md">
                         Current
                       </span>
                     )}
                   </div>
                   <p className="font-body text-sm text-muted">
-                    {job.company} · {job.period}
+                    {job.company} | {job.period}
                   </p>
                 </div>
                 <span className={`text-muted mt-0.5 transition-transform duration-300 text-lg ${expanded === i ? 'rotate-45' : ''}`}>
@@ -46,20 +45,19 @@ export default function Experience() {
                 </span>
               </button>
 
-              {/* Expanded content */}
               {expanded === i && (
                 <div id={`experience-panel-${i}`} className="px-5 pb-5 border-t border-subtle pt-4">
                   <ul className="space-y-2 mb-4">
                     {job.bullets.map((bullet, j) => (
                       <li key={j} className="font-body text-sm text-ink flex gap-2">
-                        <span className="text-accent mt-1 shrink-0">→</span>
+                        <span className="text-accent mt-1 shrink-0">-&gt;</span>
                         <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {job.tags.map(tag => (
-                      <span key={tag} className="font-mono text-xs bg-paper border border-subtle text-muted px-2.5 py-1 rounded-full">
+                      <span key={tag} className="font-mono text-xs bg-paper border border-subtle text-muted px-2.5 py-1 rounded-md">
                         {tag}
                       </span>
                     ))}

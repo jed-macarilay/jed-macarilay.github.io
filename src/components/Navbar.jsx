@@ -35,7 +35,7 @@ export default function Navbar() {
           <li>
             <a
               href={`mailto:${personal.email}`}
-              className="font-body text-sm bg-accent text-paper px-4 py-2 rounded-full hover:bg-opacity-90 transition-all"
+              className="font-body text-sm bg-accent text-paper px-4 py-2 rounded-md hover:bg-accentDark transition-all"
             >
               Hire me
             </a>
@@ -70,7 +70,7 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <a href={`mailto:${personal.email}`} className="font-body text-sm bg-accent text-paper px-4 py-2 rounded-full inline-block">
+              <a href={`mailto:${personal.email}`} className="font-body text-sm bg-accent text-paper px-4 py-2 rounded-md inline-block">
                 Hire me
               </a>
             </li>

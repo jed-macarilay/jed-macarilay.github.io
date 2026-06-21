@@ -10,12 +10,12 @@ export default {
       },
       colors: {
         ink: '#111827',
-        paper: '#F4F1EA',
+        paper: '#F7F8FA',
         accent: '#0F766E',
         accentDark: '#115E59',
-        card: '#FFFCF7',
-        muted: '#6B7280',
-        subtle: '#D6D3CD',
+        card: '#FFFFFF',
+        muted: '#526071',
+        subtle: '#D9E0E8',
       },
       animation: {
         'fade-up': 'fadeUp 0.6s ease forwards',

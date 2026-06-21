@@ -1,9 +1,9 @@
 export default function About() {
   const strengths = [
-    { label: 'Vue.js and Laravel', sub: 'Core expertise' },
-    { label: 'React and TypeScript', sub: 'Current focus' },
-    { label: 'Azure and AWS', sub: 'Cloud platforms' },
-    { label: 'Cum Laude', sub: 'BS Information Technology' },
+    { label: 'MVP ownership', sub: 'Architecture to release' },
+    { label: 'Vue/Laravel + React/TS', sub: 'Full-stack delivery' },
+    { label: 'AWS and Azure', sub: 'Cloud deployment' },
+    { label: 'Client-facing work', sub: 'Stakeholder communication' },
   ]
 
   return (
@@ -20,7 +20,7 @@ export default function About() {
 
             <div className="mt-10 grid grid-cols-2 gap-4">
               {strengths.map(({ label, sub }) => (
-                <div key={label} className="bg-white border border-subtle rounded-2xl p-4 hover:-translate-y-0.5 transition-transform">
+                <div key={label} className="bg-white border border-subtle rounded-lg p-4">
                   <p className="font-display font-600 text-sm text-ink">{label}</p>
                   <p className="font-body text-xs text-muted mt-0.5">{sub}</p>
                 </div>
@@ -30,16 +30,16 @@ export default function About() {
 
           <div className="space-y-5 font-body text-base text-ink leading-relaxed">
             <p>
-              I am a Full-Stack Developer based in the Philippines with <strong className="font-500">8 years of experience</strong> shipping scalable web apps across fintech, banking, industrial automation, and branding.
+              I am a Full-Stack Developer based in the Philippines with <strong className="font-500">8+ years of experience</strong> shipping web apps across fintech, banking, logistics, healthcare, and brand platforms.
             </p>
             <p>
-              My core stack is <strong className="font-500">Vue.js and Laravel</strong>, with hands-on production work in React, TypeScript, Node.js, and cloud platforms.
+              My core stack is <strong className="font-500">Vue.js and Laravel</strong>, backed by production work in React, TypeScript, Node.js, AWS, and Azure.
             </p>
             <p>
-              At <strong className="font-500">CognitiveAI</strong>, I build features for GCash platform integrations and maintain CMS platforms for client brands with strong delivery ownership.
+              At <strong className="font-500">CognitiveAI</strong>, I build GCash Miniprogram features, React dashboards, and CMS platforms for client brands with strong delivery ownership.
             </p>
             <p>
-              I also deploy on <strong className="font-500">AWS and Azure</strong>, manage CI/CD using GitHub Actions, and work comfortably across SQL and NoSQL stacks.
+              Outside client work, I build public product demos like <strong className="font-500">Vet Clinic Care</strong> and <strong className="font-500">PawKeep</strong> to show real workflows, not just code samples.
             </p>
           </div>
         </div>
